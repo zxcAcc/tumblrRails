@@ -1,5 +1,6 @@
 <div class="col-sm-11 col-xs-12 blog-content">
-  <h2 class="text-center"><%= @post.title %></h2>
-  <h5 class="text-center"><%= @post.created_at.strftime('%b %d, %Y') %></h5>
-  <div><%= raw @post.body %></div>
+  <h2 class="text-center"><center><%= @post.title %></center></h2>
+  <h5 class="text-center"><center><%= @post.created_at.strftime('%b %d, %Y') %></center></h5>
+  <div><center><%= raw @post.body %></center></div>
+  <%= link_to "Back", posts_path, class: "btn btn-primary btn-md" %>
 </div>

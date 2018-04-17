@@ -1,3 +1,108 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ 
+h1,
+h2 
+{
+  text-align: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+nav navbar-nav navbar-right
+{
+	font-weight: bold;
+}
+
+.main
+{
+  font-family: Georgia, Times, "Times New Roman", serif;  text-align: center;
+	background-image: url('oldpaper.jpg'); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-style: italic;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-left: 80px;
+  padding-bottom: 50px;
+
+
+}
+
+.navback
+{
+    background-image: url('navbarpic.png'); 
+    background-size: 100% 100%;
+}
+
+.back
+{
+	background-image: url('oldpaper.jpg'); 
+  background-size: 100% 100%;
+  font-family: Georgia, Times, "Times New Roman", serif; font-style: italic;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-left: 80px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+
+li
+{
+  color: white;
+  font-family: Georgia, Times, "Times New Roman", serif;}
+
+.open 
+{
+  text-align: center;
+  background-image: url('oldpaper.jpg') 
+}
+
+.btn-sample { 
+  color: #ffffff; 
+  background-color: #AD8623; 
+  border-color: #AD8623; 
+} 
+ 
+.btn-sample:hover, 
+.btn-sample:focus, 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  color: #ffffff; 
+  background-color: #000000; 
+  border-color: #AD8623; 
+} 
+ 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  background-image: none; 
+} 
+ 
+.btn-sample.disabled, 
+.btn-sample[disabled], 
+fieldset[disabled] .btn-sample, 
+.btn-sample.disabled:hover, 
+.btn-sample[disabled]:hover, 
+fieldset[disabled] .btn-sample:hover, 
+.btn-sample.disabled:focus, 
+.btn-sample[disabled]:focus, 
+fieldset[disabled] .btn-sample:focus, 
+.btn-sample.disabled:active, 
+.btn-sample[disabled]:active, 
+fieldset[disabled] .btn-sample:active, 
+.btn-sample.disabled.active, 
+.btn-sample[disabled].active, 
+fieldset[disabled] .btn-sample.active { 
+  background-color: #AD8623; 
+  border-color: #AD8623; 
+} 
+ 
+.btn-sample .badge { 
+  color: #AD8623; 
+  background-color: #ffffff; 
+}
