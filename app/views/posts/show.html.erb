@@ -2,5 +2,39 @@
   <h2 class="text-center"><center><%= @post.title %></center></h2>
   <h5 class="text-center"><center><%= @post.created_at.strftime('%b %d, %Y') %></center></h5>
   <div><center><%= raw @post.body %></center></div>
+    <br>
+    <strong><center>Comments</center></strong>
+    <br>
+  <% @post.comments.each do |comment| %>
+     <p>
+      <strong><%= comment.commenter %></strong>
+    </p>
+    <p>
+      <%= comment.body %><br>
+    </p>
+    <% if admin_signed_in? %>  
+    <%= link_to 'Delete Comment',post_comment_path(@post, comment),method: :delete,data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <% end %>
+ <strong><center>Add Comment</center></strong>
+  <%= form_for([@post, @post.comments.build]) do |f| %>
+      <p><center>
+      <%= f.label :commenter %>:
+      <%= f.text_field :commenter %>
+    </center></p>
+    <p><center>
+      <%= f.text_area :body %>
+    </p></center>
+    <p><center>
+      <%= f.submit "Create Comment", :id => "save-button" %>
+    </p></center>
+  <% end %>
+  <% else %>
+    <center><%= link_to 'Login/Register to add new comments', new_admin_session_path%>
+    </center>
+  <% end %>
+  <br>
+  <%= link_to "Back", posts_path, class: "btn btn-primary btn-md" %>
   <%= link_to "Back", posts_path, class: "btn btn-primary btn-md" %>
 </div>
+<% end %>
